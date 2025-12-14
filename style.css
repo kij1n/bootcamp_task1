@@ -1,0 +1,119 @@
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    background-color: #F3F3F3;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "landing-page"
+            "main"
+            "footer";
+}
+
+#landing-page {
+    grid-area: landing-page;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "navbar"
+            "header"
+            "logos";
+    padding-top: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap:70px;
+}
+
+#navbar {
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px
+}
+
+#navbar a:first-child {
+    margin-right: auto;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #000;
+}
+
+#navbar #request-quote {
+    border: 1px solid #000;
+    border-radius: 14px;
+    padding: 20px 35px;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+            "left right";
+    gap: 35px;
+}
+
+header #landing-text {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 531px;
+    max-height: 481px;
+    row-gap: 35px;
+}
+
+header #landing-text button {
+    border: 1px solid #191A23;
+    background-color: #191A23;
+    color: white;
+    font-size: 1rem;
+    border-radius: 14px;
+    padding: 20px 35px;
+    max-width: 264px;
+    max-height: 68px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 28px;
+}
+
+header img {
+    grid-area: right;
+    max-width: 600px;
+    max-height: 515px;
+}
+
+#landing-page #companies-logos {
+    grid-area: logos;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+    gap: 20px;
+}
+
+header #companies-logos img {
+    max-width: 124.11px;
+    max-height: 48px;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}

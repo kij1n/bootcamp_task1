@@ -356,6 +356,9 @@ ul {
 }
 
 #cta-block #cta-text button {
+    max-width: 288px;
+    max-height: 68px;
+
     color: #FFFFFF;
     background-color: #191A23;
     border: 1px solid #191A23;
@@ -492,8 +495,223 @@ ul {
 
 #contact-form {
     grid-area: contact-form;
+
+    width: 100%;
+    max-height: 856px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "form-heading"
+            "form";
+    gap: 10px;
+}
+
+#contact-form #contact-title {
+    grid-area: form-heading;
+
+    width: 100%;
+    max-height: 51px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 40px;
+}
+
+#contact-form #contact-title h2 {
+    max-width: 229px;
+    max-height: 51px;
+
+    font-weight: 500;
+    font-size: 2rem;
+
+    padding-left: 7px;
+    padding-right: 7px;
+
+    border: 1px #B9FF66;
+    background-color: #B9FF66;
+    border-radius: 7px;
+}
+
+#contact-form #contact-title p {
+    max-width: 323px;
+    max-height: 46px;
+
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+#contact-form form {
+    width: 100%;
+    max-height: 773px;
+
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                "radio img"
+                "name img"
+                "email img"
+                "message img"
+                "submit img";
+
+    row-gap: 40px;
+    column-gap: 100px;
+    padding: 60px 100px 80px;
+    border: 1px solid #F3F3F3;
+    border-radius: 45px;
+    background-color: #F3F3F3;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+#contact-form form #radio {
+    grid-area: radio;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#contact-form form #radio label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    max-height: 23px;
+}
+#contact-form form #name {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#contact-form form #email {
+    grid-area: email;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#contact-form form #name input, #contact-form form #email input {
+    max-width: 556px;
+    max-height: 59px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 18px 30px;
+}
+
+#contact-form form #message {
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#contact-form form #message textarea {
+    width: 556px;
+    height: 190px;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+    padding: 18px 30px;
+
+    text-align: left;
+    vertical-align: top;
+}
+
+#contact-form form #contact {
+    grid-area: submit;
+}
+
+#contact-form form #img-container {
+    grid-area: img;
+    max-width: calc(691px/2);
+    max-height: 648px;
+
+    overflow: hidden;
+}
+
+#contact-form form #img-container img {
+    max-width: 691px;
+    max-height: 648px;
+}
+
+#contact-form form button {
+    max-width: 556px;
+    max-height: 68px;
+
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 400;
+
+    background-color: #191A23;
+    border: 1px solid #191A23;
+    border-radius: 14px;
+    padding: 20px 35px;
 }
 
 footer {
     grid-area: footer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

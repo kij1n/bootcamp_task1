@@ -189,7 +189,7 @@ main {
     padding: 50px;
 }
 
-ul {
+#services-list ul {
     display: contents;
 }
 
@@ -700,9 +700,126 @@ label {
 
 footer {
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                "nav"
+                "footer-content"
+                "small";
+    gap: 30px;
+
+    background-color: #191A23;
+    border: 1px solid #191A23;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+    padding: 55px 60px 50px;
 }
 
+#nav-footer {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
+#nav-footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    list-style: none;
+}
+
+#nav-footer ul li a {
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    color: #FFFFFF;
+}
+
+#footer-content {
+    grid-area: footer-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 154px;
+}
+
+#footer-content address h4 {
+    max-width: 126px;
+    max-height: 26px;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+
+    background-color: #B9FF66;
+    padding: 0 7px;
+    border-radius: 7px;
+}
+
+#footer-content address p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+#footer-content form {
+    width: 634px;
+    height: 184px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    padding: 40px 58px;
+    border: 1px solid #191A23;
+    background-color: #292A32;
+    border-radius: 14px;
+}
+
+#footer-content form input {
+    width: 285px;
+    height: 67px;
+
+    color: #FFFFFF;
+
+    border: 1px solid #FFFFFF;
+    background-color: #292A32;
+    border-radius: 14px;
+    padding: 12px 35px;
+}
+
+#footer-content form button {
+    width: 249px;
+    height: 64px;
+
+    color: black;
+    background-color: #B9FF66;
+    border: 1px solid #B9FF66;
+    border-radius: 14px;
+    padding: 20px 35px;
+}
+
+small {
+    grid-area: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+small a {
+    color: #FFFFFF;
+}
 
 
 

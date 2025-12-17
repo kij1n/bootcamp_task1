@@ -221,30 +221,38 @@
                 <h2 id="contact-us">Contact Us</h2>
                 <p id="contact-intro">Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
             </div>
-            <form action="#">
-                <div id="radio">
-                    <input type="radio" name="contact-type" id="say-hi">
-                    <label for="say-hi">Say Hi</label>
-                    <input type="radio" name="contact-type" id="get-quote">
-                    <label for="get-quote">Get a Quote</label>
-                </div>
-                <div id="name">
-                    <label for="form-name">Name</label>
-                    <input type="text" placeholder="Name" id="form-name">
-                </div>
-                <div id="email">
-                    <label for="form-email">Email*</label>
-                    <input type="text" placeholder="Email" id="form-email">
-                </div>
-                <div id="message">
-                    <label for="form-message">Message*</label>
-                    <textarea placeholder="Message" id="form-message"></textarea>
-                </div>
-                <button type="submit" id="submit-contact">Send Message</button>
+            <div id="form-container">
+                <form action="#">
+                    <div id="radio">
+                        <label for="say-hi" class="radio-label">
+                            <input type="radio" name="contact-type" id="say-hi">
+                            <span class="radio-button"></span>
+                            Say Hi
+                        </label>
+                        <label for="get-quote" class="radio-label">
+                            <input type="radio" name="contact-type" id="get-quote">
+                            <span class="radio-button"></span>
+                            Get a Quote
+                        </label>
+                    </div>
+                    <div id="name">
+                        <label for="form-name">Name</label>
+                        <input type="text" placeholder="Name" id="form-name">
+                    </div>
+                    <div id="email">
+                        <label for="form-email">Email*</label>
+                        <input type="text" placeholder="Email" id="form-email">
+                    </div>
+                    <div id="message">
+                        <label for="form-message">Message*</label>
+                        <textarea placeholder="Message" id="form-message"></textarea>
+                    </div>
+                    <button type="submit" id="submit-contact">Send Message</button>
+                </form>
                 <div id="img-container">
                     <img src="images/contact_us.png" alt="contact-us-img">
                 </div>
-            </form>
+            </div>
 
         </section>
     </main>

@@ -546,26 +546,32 @@ ul {
     line-height: 1.5;
 }
 
-#contact-form form {
+#contact-form #form-container {
     width: 100%;
     max-height: 773px;
 
     grid-area: form;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-                "radio img"
-                "name img"
-                "email img"
-                "message img"
-                "submit img";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-    row-gap: 40px;
-    column-gap: 100px;
-    padding: 60px 100px 80px;
+    padding: 60px 0 80px 100px;
     border: 1px solid #F3F3F3;
     border-radius: 45px;
     background-color: #F3F3F3;
+}
+
+#contact-form #form-container form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                "radio"
+                "name"
+                "email"
+                "message"
+                "submit";
+    gap: 30px;
 }
 
 label {
@@ -574,33 +580,68 @@ label {
     line-height: 28px;
 }
 
-#contact-form form #radio {
-    grid-area: radio;
+#contact-form #form-container form #radio {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#contact-form #form-container form #radio .radio-label {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-#contact-form form #radio label {
-    font-size: 0.9rem;
-    font-weight: 400;
-    max-height: 23px;
+#contact-form #form-container form #radio .radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
-#contact-form form #name {
+
+.radio-button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #191A23;
+    background-color: #FFFFFF;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-button::after {
+    content: "";
+    display: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #B9FF66;
+}
+
+#contact-form #form-container form #radio input:checked ~ .radio-button::after {
+    display: block;
+}
+
+#contact-form #form-container form #name {
     grid-area: name;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#contact-form form #email {
+#contact-form #form-container form #email {
     grid-area: email;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#contact-form form #name input, #contact-form form #email input {
+#contact-form #form-container form #name input,
+#contact-form #form-container form #email input {
     max-width: 556px;
     max-height: 59px;
 
@@ -609,14 +650,14 @@ label {
     padding: 18px 30px;
 }
 
-#contact-form form #message {
+#contact-form #form-container form #message {
     grid-area: message;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#contact-form form #message textarea {
+#contact-form #form-container form #message textarea {
     width: 556px;
     height: 190px;
 
@@ -628,15 +669,13 @@ label {
     vertical-align: top;
 }
 
-#contact-form form #contact {
+#contact-form #form-container form #submit-contact {
     grid-area: submit;
 }
 
-#contact-form form #img-container {
-    grid-area: img;
+#contact-form #form-container #img-container {
     max-width: calc(691px/2);
     max-height: 648px;
-
     overflow: hidden;
 }
 
@@ -645,7 +684,7 @@ label {
     max-height: 648px;
 }
 
-#contact-form form button {
+#contact-form #form-container form button {
     max-width: 556px;
     max-height: 68px;
 

@@ -826,7 +826,72 @@ small a {
     color: #FFFFFF;
 }
 
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0 60px;
+    }
+}
 
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 0 20px;
+    }
+
+    #landing-text {
+        align-items: center;
+        justify-self: center;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "right"
+                "left";
+        align-items: center;
+        justify-content: center;
+    }
+
+    header img {
+        display: none;
+    }
+
+    header img {
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    #services-text {
+        justify-self: center;
+    }
+
+    #services-list {
+        justify-content: center;
+    }
+
+    #services-list li {
+        width: 100%;
+        align-self: center;
+    }
+
+    #cta-block {
+        flex-direction: row;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    #process-heading {
+        justify-self: center;
+    }
+
+    #contact-title {
+        justify-self: center;
+    }
+
+    #contact-form {
+        grid-template-areas:
+                    "";
+    }
+}
 
 
 

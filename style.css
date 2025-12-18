@@ -4,6 +4,7 @@
 
 body {
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 100px;
 
@@ -49,13 +50,14 @@ body {
     color: #000;
 }
 
-#navbar #request-quote {
+#request-quote {
     border: 1px solid #000;
     border-radius: 14px;
     padding: 20px 35px;
 }
 
 header {
+    width: 100%;
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -64,7 +66,7 @@ header {
     gap: 35px;
 }
 
-header #landing-text {
+#landing-text {
     grid-area: left;
     display: flex;
     flex-direction: column;
@@ -73,13 +75,14 @@ header #landing-text {
     row-gap: 35px;
 }
 
-header #landing-text button {
+#landing-text button {
     border: 1px solid #191A23;
     background-color: #191A23;
     color: white;
     font-size: 1rem;
     border-radius: 14px;
     padding: 20px 35px;
+    width: calc(264/(100vw) * 100%);
     max-width: 264px;
     max-height: 68px;
 }
@@ -100,7 +103,7 @@ header img {
     max-height: 515px;
 }
 
-#landing-page #companies-logos {
+#companies-logos {
     grid-area: logos;
     display: flex;
     flex-direction: row;
@@ -110,7 +113,7 @@ header img {
     filter: grayscale(100%);
 }
 
-header #companies-logos img {
+#companies-logos img {
     max-width: 124.11px;
     max-height: 48px;
 }
@@ -175,7 +178,9 @@ main {
 }
 
 #services-list li {
-    width: 600px;
+    width: 48%;
+    max-width: 600px;
+    /*height: calc(310/(100vw) * 100%);*/
     height: 310px;
 
     display: grid;
@@ -316,7 +321,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 275px;
+    gap: clamp(50px,19vw,275px);
 
     padding: 0 60px;
     border: 1px solid #F3F3F3;
@@ -331,7 +336,7 @@ main {
     margin-bottom: calc((347px - 394px)/2);
 }
 
-#cta-block #cta-text {
+#cta-text {
     max-width: 500px;
     max-height: 227px;
 
@@ -340,7 +345,7 @@ main {
     gap: 26px;
 }
 
-#cta-block #cta-text h3 {
+#cta-text h3 {
     margin: 0;
     max-width: 500px;
     max-height: 38px;
@@ -348,14 +353,14 @@ main {
     font-size: 1.5rem;
 }
 
-#cta-block #cta-text p {
+#cta-text p {
     max-width: 500px;
     max-height: 69px;
     font-weight: 400;
     font-size: 0.9rem;
 }
 
-#cta-block #cta-text button {
+#cta-text button {
     max-width: 288px;
     max-height: 68px;
 
@@ -376,7 +381,7 @@ main {
     gap: 30px;
 }
 
-#working-process #process-heading {
+#process-heading {
     grid-area: process-heading;
     display: flex;
     flex-direction: row;
@@ -384,7 +389,7 @@ main {
     gap: 40px;
 }
 
-#working-process #process-heading h2 {
+#process-heading h2 {
     font-size: 2rem;
     font-weight: 500;
 
@@ -398,14 +403,14 @@ main {
     border-radius: 7px;
 }
 
-#working-process #process-heading p {
+#process-heading p {
     max-width: 292px;
     max-height: 48px;
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
-#working-process #process-list {
+#process-list {
     grid-area: process-list;
     display: flex;
     flex-direction: column;
@@ -413,10 +418,10 @@ main {
     gap: 30px;
 }
 
-#working-process #process-list details {
+#process-list details {
     font-weight: 500;
     font-size: 1.5rem;
-    width: 1234px;
+    width: clamp(200px,85vw,1234px);
     height: 159px;
 
     background-color: #F3F3F3;
@@ -442,37 +447,37 @@ main {
     justify-content: space-between;
 }
 
-#working-process #process-list details summary {
+#process-list details summary {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 25px;
 }
 
-#working-process #process-list details summary .process-text {
+details summary .process-text {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 25px;
 }
 
-#working-process #process-list details summary .process-text .process-index {
+details summary .process-text .process-index {
     font-size: 3rem;
     font-weight: 500;
     max-width: 65px;
     max-height: 77px;
 }
 
-#working-process #process-list details summary img {
+details summary img {
     max-width: 58px;
     max-height: 58px;
 }
 
-#working-process #process-list details .content {
+details .content {
     border-top: 1px solid #191A23;
 }
 
-#working-process #process-list details[open] {
+#process-list details[open] {
     background-color: #B9FF66;
     height: 279px;
     .expand-icon {
@@ -483,7 +488,7 @@ main {
     }
 }
 
-#working-process #process-list details > p {
+details > p {
     font-weight: 500;
     font-size: 1.5rem;
 
@@ -507,7 +512,7 @@ main {
     gap: 10px;
 }
 
-#contact-form #contact-title {
+#contact-title {
     grid-area: form-heading;
 
     width: 100%;
@@ -521,7 +526,7 @@ main {
     gap: 40px;
 }
 
-#contact-form #contact-title h2 {
+#contact-title h2 {
     max-width: 229px;
     max-height: 51px;
 
@@ -536,7 +541,7 @@ main {
     border-radius: 7px;
 }
 
-#contact-form #contact-title p {
+#contact-title p {
     max-width: 323px;
     max-height: 46px;
 
@@ -546,7 +551,7 @@ main {
     line-height: 1.5;
 }
 
-#contact-form #form-container {
+#form-container {
     width: 100%;
     max-height: 773px;
 
@@ -562,7 +567,7 @@ main {
     background-color: #F3F3F3;
 }
 
-#contact-form #form-container form {
+#form-container form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -580,19 +585,19 @@ label {
     line-height: 28px;
 }
 
-#contact-form #form-container form #radio {
+#radio {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-#contact-form #form-container form #radio .radio-label {
+#radio .radio-label {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-#contact-form #form-container form #radio .radio-label input {
+#radio .radio-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -622,26 +627,26 @@ label {
     background: #B9FF66;
 }
 
-#contact-form #form-container form #radio input:checked ~ .radio-button::after {
+#radio input:checked ~ .radio-button::after {
     display: block;
 }
 
-#contact-form #form-container form #name {
+#name {
     grid-area: name;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#contact-form #form-container form #email {
+#email {
     grid-area: email;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#contact-form #form-container form #name input,
-#contact-form #form-container form #email input {
+#name input,
+#email input {
     max-width: 556px;
     max-height: 59px;
 
@@ -650,15 +655,15 @@ label {
     padding: 18px 30px;
 }
 
-#contact-form #form-container form #message {
+#message {
     grid-area: message;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#contact-form #form-container form #message textarea {
-    width: 556px;
+#message textarea {
+    width: clamp(50px,38vw,556px);
     height: 190px;
 
     border: 1px solid #FFFFFF;
@@ -669,22 +674,22 @@ label {
     vertical-align: top;
 }
 
-#contact-form #form-container form #submit-contact {
+#submit-contact {
     grid-area: submit;
 }
 
-#contact-form #form-container #img-container {
+#img-container {
     max-width: calc(691px/2);
     max-height: 648px;
     overflow: hidden;
 }
 
-#contact-form form #img-container img {
+#img-container img {
     max-width: 691px;
     max-height: 648px;
 }
 
-#contact-form #form-container form button {
+#form-container form button {
     max-width: 556px;
     max-height: 68px;
 
@@ -767,7 +772,7 @@ footer {
 }
 
 #footer-content form {
-    width: 634px;
+    width: clamp(50px,44vw,634px);
     height: 184px;
 
     display: flex;
@@ -782,7 +787,7 @@ footer {
 }
 
 #footer-content form input {
-    width: 285px;
+    width: clamp(50px,20vw,285px);
     height: 67px;
 
     color: #FFFFFF;
@@ -794,7 +799,7 @@ footer {
 }
 
 #footer-content form button {
-    width: 249px;
+    width: clamp(50px,17vw,249px);
     height: 64px;
 
     color: black;
